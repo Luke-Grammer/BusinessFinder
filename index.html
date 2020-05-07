@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <!-- Include necessary favicon, fonts, and CSS -->
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    <!-- Beginning of display -->
+    <title>BusinessFinder</title>
+    <!-- Include JQuery and CanvasJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
+    <!-- Misc. Javascript for main page -->
+    <script src="Page.js"></script>
+    <!-- Javascript for interaction with IP Geolocation API -->
+    <script src="IPGeolocator.js"></script>
+    <!-- Javascript for interaction with Yelp! -->
+    <script src="Yelp.js"></script>
+    <!-- Javascript for interaction with Sentiment Analysis API -->
+    <script src="SentimentAnalysis.js"></script>
+</head>
+
+<body>
+    <!-- BusinessFinder logo and intro text -->
+    <div class = "title">
+        <img class = "logo-photo" src="business_finder.png" alt="Welcome to BusinessFinder!"><br>
+        <p1> Time to start finding businesses! </p1>
+        <br>
+        <p1> To start searching for reviews, please enter a location or select 'Detect my location' </p1>
+    </div>
+
+    <!-- Container for location input and display -->
+    <div class = "location">
+        <p1> City or Zip Code: 
+            <input type = "textbox" class = "location-input" autofocus="autofocus"> </input>
+            <button onclick="getIPLocationData()" class="location-button">Use Current Location</button> 
+        </p1>
+        
+        <div class = "location-container"> 
+            <p2 id = "location-status"> </p2>
+            <p2 id = "location"> </p2>
+            <p2 id = "address"> </p2>
+            <p2 id = "latitude"> </p2>
+            <p2 id = "longitude"> </p2>
+            <br><br>
+        </div>
+    </div>
+    <!-- TODO: group buttons to clean code -->
+
+    <!-- Container for business filters and search button -->
+    <div class = 'business-actions'>
+            <fieldset>
+                <label for="txt-search-radius">Search Radius (m):  </label><input type="text" class = "radius-input" placeholder="40000" name="txt-search-radius">
+                <br>
+                <label for="txt-price-range">  Price:          </label><input type="text" class = "price-input" placeholder="$-$$$$" name="txt-price-range">
+                <br>
+                <label for="txt-business-type">Search Terms:   </label><input type="text" class = "business-type-input" placeholder="Food" name="txt-business-type">
+            </fieldset>
+        <button class='business-button' onclick="getBusinesses(0, 5)"> Find Nearby Businesses </button>
+        <br><br>
+    </div>
+
+    <!-- Container for displaying businesses and result information -->
+    <div class = "businesses">
+        <div class='business-title'>
+            <button class='prev-page-button' onclick="getPrevContentPage()">Previous Page</button>
+            Nearby Businesses 
+            <button class='next-page-button' onclick="getNextContentPage()">Next Page</button>
+        </div>
+        
+        <div class='business-container'>
+            <!-- Contents of result set initially empty -->
+        </div>
+        <br><br>
+    </div>
+
+    <div class = "footer">
+        <p1> Written and produced in Fall 2019 by Luke Grammer, Lauren Haylock, and Davis Beilue</p1>
+        <br><br>     
+    </div>
+
+    <button onclick="topFunction()" class="scroll-btn" id="back-to-top-btn" title="Go to top">Return to Top</button>
+    
+    <!-- Basic script hides elements and sets up event handlers -->
+    <script>
+        $('.business-button').hide()
+        $('.next-page-button').hide()
+        $('.prev-page-button').hide()
+        $('.location-container').hide()
+
+        function inputEvent(event) {
+            if (event.keyCode === 13 && $(".business-button").is(":visible"))
+                $(".business-button").click()  
+        }
+
+        $(".location-input").keyup(inputEvent)
+        $(".radius-input").keyup(inputEvent)
+        $(".price-input").keyup(inputEvent)
+        $(".business-type-input").keyup(inputEvent)
+
+        jQuery('.location-input').on('input', function() {
+            $('.next-page-button').hide()
+            $('.prev-page-button').hide()
+            $('.business-container').html('')
+            if ($('.location-input').val() == '') {
+                $('.business-button').hide('slow')
+            }
+            else {
+                $('.location-container').hide('slow')
+                $(".location-input").css("background-color", "#FFF5E7")
+                $('.business-button').show('slow')
+            }
+        })
+    </script>
+</body>
+</html>

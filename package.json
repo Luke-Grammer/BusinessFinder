@@ -1,0 +1,20 @@
+{
+  "name": "csce-315-project-2",
+  "version": "1.0.0",
+  "description": "businessfinder project to retreive information from Yelp! API and use sentiment analysis tools to find popular opinion about local businesses",
+  "main": "Yelp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.tamu.edu/luke-grammer/CSCE-315-Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "yelp-api": "^1.0.3"
+  }
+}

@@ -1,0 +1,282 @@
+
+body {
+    background: #334355;
+}
+
+h2 {
+    padding: 5px;
+    text-align: center;
+    color: #FFF5E7;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #FFF5E7; 
+    font-weight: normal;
+}
+
+p2 {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF5E7;
+}
+
+.logo-photo {
+    float: center;
+    height: 25%;
+    width: 25%;
+}
+
+.title {
+    text-align:center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.location {
+    color: #FFF5E7;
+    text-align:center;
+    display: inline-block;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.location-container {
+    white-space: nowrap;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #FFF5E7; 
+    font-weight: normal;
+    display:inline-block;
+    width:25%;
+    margin-right:15px;
+    text-align:left;
+}
+
+input {
+    width: 50%;
+    background-color: #FFF5E7;
+    padding: 0.2%;
+    color: #334355;
+    border: 1px solid  rgba(176, 66, 62, 0.87);
+    border-radius: 4px;
+    margin-bottom: 2%;
+    justify-content: right;
+}
+
+fieldset {
+    border:none;
+    width: auto;
+    max-width:550px;
+    margin:auto;
+}
+
+.location-input {
+    width: 20%; 
+    background-color: #FFF5E7;
+    padding: 0.2%;
+    color: #334355;
+    border: 1px solid  rgba(176, 66, 62, 0.87);
+    border-radius: 4px;
+}
+
+.business-button {
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    min-height: 30px;
+    height: auto;
+    margin-left: 30px;
+    margin-right: 5px;
+    background-color: rgba(176, 66, 62, 0.87);
+    border-radius: 4px;
+    color: #FFF5E7;
+    border: 1px solid  rgba(176, 66, 62, 0.87);
+}
+
+.business-button:hover {
+    background-color: #FFF5E7;
+    color: rgba(176, 66, 62, 0.87);
+    text-transform: bold;
+}
+
+.location-button {
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    min-height: 30px;
+    height: auto;
+    margin-left: 10px;
+    background-color: rgba(176, 66, 62, 0.87);
+    border-radius: 4px;
+    color: #FFF5E7;
+    border: 1px solid  rgba(176, 66, 62, 0.87);
+    margin-bottom: 20px;
+}
+
+.location-button:hover {
+    background-color: #FFF5E7;
+    color: rgba(176, 66, 62, 0.87);
+}
+
+.next-page-button {
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    height: auto;
+    min-height: 30px;
+    background-color: #334355;
+    border-radius: 4px;
+    color: #FFF5E7;
+    border: 1px solid  #FFF5E7;
+    margin-right: 10px;
+    float: right;
+}
+
+.next-page-button:hover {
+    background-color: #FFF5E7;
+    color: #334355;
+    border: 1px solid  #334355;
+}
+
+.prev-page-button {
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    height: auto;
+    min-height: 30px;
+    background-color: #334355;
+    border-radius: 4px;
+    color: #FFF5E7;
+    border: 1px solid  #FFF5E7;
+    margin-left: 10px;
+    float: left;
+}
+
+.prev-page-button:hover {
+    background-color: #FFF5E7;
+    color: #334355;
+    border: 1px solid  #334355;
+}
+
+.businesses {
+    margin-top: 1%;
+}
+
+.business-actions {
+    width: 60%;
+    text-align:center;
+}
+
+.price-range {
+    margin-left: 1%;
+}
+
+.business-summary {
+    text-align:center;
+    font-weight: 800;
+}
+
+.canvasjs-chart-container {
+    float: left;
+    width: 100%;
+}
+
+.business-image {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    max-height: 250px;
+    max-width: 150px;
+    padding: 1%;
+    float: left;
+}
+
+.business {
+    font-weight: 800;
+    padding: 1%;
+    border-top: 1px dashed #FFF5E7;
+    display: inline-block;
+    width: 98%;
+    min-height: 250px;
+}
+
+.business-info {
+    height: auto;
+    width: 50%;
+    overflow: auto;
+    float:left;
+}
+
+.business-review {
+    float: left;
+    height: 250px;
+    width: 250px;
+    font-weight: normal;
+}
+
+.business-text {
+    text-align:left;
+    float: left;
+}
+
+.business-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #FFF5E7;
+    margin: 0 auto;
+    text-align:center;
+    height: auto;
+    min-height: 25px;
+    line-height: 25px;
+    width: 80%;
+    border: 2px solid #FFF5E7;
+    border-bottom-width: 0px;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    background-color: rgba(176, 66, 62, 0.87);
+}
+
+.business-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF5E7;
+    margin: 0 auto;
+    padding-top: 1%;
+    min-height: 350px;
+    height: auto;
+    width: 80%;
+    border: 2px solid #FFF5E7;
+}
+
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(176, 66, 62, 1);
+    outline: none;
+    background-color: rgba(176, 66, 62, 1); 
+    color: #FFF5E7;
+    padding: 15px; 
+    border-radius: 5px 20px 5px; 
+    font-size: 18px; 
+  }
+  
+  #back-to-top-btn:hover {
+    background-color: #FFF5E7;
+    color: rgba(176, 66, 62, 0.87);
+  }
+
+  .business-actions {
+      margin: 0 auto;
+  }
